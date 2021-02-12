@@ -1,10 +1,9 @@
 import React from 'react'
 
-const Color = ({color}) => {
-    //how to use useParams here?
+const Color = () => {
     return (
         <div>
-        
+            Hello World
         </div>
     )
 }

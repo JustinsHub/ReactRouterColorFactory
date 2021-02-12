@@ -1,8 +1,10 @@
 import React, {useState} from 'react'
+import {useHistory} from 'react-router-dom'
 
 const NewColor = ({addColor}) => {
     const INITIAL_STATE = ''
     const [color, setColor] = useState(INITIAL_STATE)
+    const history = useHistory()
 
     const handleChange = (e) => {
         const {value} = e.target
@@ -12,6 +14,7 @@ const NewColor = ({addColor}) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         addColor(color)
+        history.push(`/colors`)
         setColor(INITIAL_STATE)
     }
 
@@ -27,6 +30,9 @@ const NewColor = ({addColor}) => {
             placeholder="Name of color"
             onChange={handleChange}
             />
+            <div>
+            <button>Submit</button>
+            </div>
         </form>
         </div>
     )
