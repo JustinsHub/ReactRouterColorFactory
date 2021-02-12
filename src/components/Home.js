@@ -6,8 +6,10 @@ const Home = () => {
 
     return (
         <div>
-            Welcome Home
-            <Link to="/colors">See all colors</Link>
+            <h1>Welcome Home</h1>
+            <div>
+                <Link to="/colors">See all colors</Link>
+            </div>
         </div>
     )
 }
